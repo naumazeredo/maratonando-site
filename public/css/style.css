@@ -1,5 +1,5 @@
 .container {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
 
@@ -137,8 +137,8 @@ button:disabled {
   color: #999;
 }
 
-.menu-active::first-line {
-  color: black;
+.menu-active {
+  background-color: #333;
   opacity: 1;
 }
 
@@ -414,8 +414,9 @@ header .dropdown-menu li a{
 
 #new-user-action{
   background: url("../imgs/action_bg.png") repeat-x;
-  height: 580px;
+  /*height: 580px;*/ /* not good for mobile app */
   box-shadow: inset 0px -5px 10px rgba(0,0,0,0.05);
+  padding-bottom: 12px;
 }
 
 .form-top {
@@ -468,10 +469,7 @@ header .dropdown-menu li a{
   border-color: #19b9e7;
 }
 
-#new-user-action td{
-  padding: 0px 5px 0px 5px;
-}
-
+/*
 #new-user-action input{
     height: 50px;
     margin: 0px 10px 10px 0px;
@@ -506,6 +504,7 @@ header .dropdown-menu li a{
   -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
   -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
+*/
 
 #action-info img{
   margin-top: 160px;
@@ -557,17 +556,23 @@ header .dropdown-menu li a{
 
 #register-area input{
   width: 100%;
-  font: 400 14px "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
   padding: 17px;
   border: solid 1px #d0d0d0;
+  background-position: 7px 21px;
+
   border-radius: 2px;
+  -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+  -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
 #register-area input:focus{
-  font: 600 14px "Open Sans";
-  padding: 17px 17px 17px 30px;
-  background: url("../imgs/register_area_bullet.png") no-repeat;
-  background-position: 16px 23px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 17px 17px 17px 24px;
+  background: url("../imgs/register_area_bullet.png") no-repeat #fff;
+  background-position: 14px 21px;
 }
 
 #register-area .register-area-split input:nth-child(1){
@@ -576,6 +581,7 @@ header .dropdown-menu li a{
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-right: 0px;
+  margin: auto 0;
 }
 
 #register-area .register-area-split input:nth-child(2){
@@ -583,6 +589,7 @@ header .dropdown-menu li a{
   float: left;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  margin: auto 0;
 }
 
 #register-area input.error{
